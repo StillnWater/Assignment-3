@@ -1,0 +1,220 @@
+.dashboard-shell {
+  width: min(1080px, calc(100% - 24px));
+  margin: 0 auto;
+  padding: 40px 0 56px;
+}
+
+.dashboard-header {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hero-text {
+  max-width: 640px;
+  font-size: 1rem;
+}
+
+.top-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.card,
+.note-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+  text-align: left;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.card h2,
+.note-card h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.subtle-text {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.student-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) 120px auto;
+  gap: 12px;
+  align-items: end;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.field input,
+.score-input {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 11px 12px;
+  background: #fff;
+  color: var(--text-h);
+}
+
+.field input:focus,
+.score-input:focus {
+  outline: 2px solid var(--focus);
+  border-color: var(--accent);
+}
+
+.primary-button,
+.save-button {
+  border: 1px solid var(--border);
+  background: #eef4ff;
+  color: #2457b0;
+  border-radius: 10px;
+  padding: 11px 14px;
+  font: inherit;
+  cursor: pointer;
+  height: 43px;
+}
+
+.primary-button:hover,
+.save-button:hover {
+  border-color: var(--accent);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.stat-card {
+  background: #f9fbff;
+  border: 1px solid #dce6f5;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.stat-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.stat-value {
+  font-size: 2.4rem;
+  line-height: 1;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.table-card {
+  margin-bottom: 16px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-table th,
+.student-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.student-table th {
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.score-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.score-badge.pass {
+  background: #e8f8ef;
+  color: #1f7a43;
+}
+
+.score-badge.fail {
+  background: #fdecec;
+  color: #b42318;
+}
+
+.score-cell {
+  font-weight: 700;
+}
+
+.score-tools {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.score-input {
+  width: 84px;
+}
+
+.note-card ul {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 10px;
+  color: var(--muted);
+}
+
+@media (max-width: 860px) {
+  .dashboard-shell {
+    width: min(100% - 20px, 1080px);
+    padding-top: 24px;
+    padding-bottom: 40px;
+  }
+
+  .top-grid,
+  .stats-grid,
+  .student-form {
+    grid-template-columns: 1fr;
+  }
+}
